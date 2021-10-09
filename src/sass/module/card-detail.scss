@@ -1,0 +1,721 @@
+$countryList: japan,
+china,
+korea,
+aiwan,
+hongkong,
+mongol,
+philipines,
+vetnam,
+laos,
+myanmar,
+cambosia,
+thai,
+malaysia,
+singapore,
+indonesia,
+bangladesh,
+india,
+srilanka,
+maldives,
+pakistan,
+uzbekistan,
+kazakhstan,
+iran,
+uae,
+saudi,
+urkey,
+egypt,
+s_africa,
+roc,
+belarus,
+ukraine,
+romania,
+poland,
+austria,
+germany,
+italia,
+france,
+spain,
+portugal,
+uk,
+ireland,
+sweden,
+finland,
+america,
+canada,
+colombia,
+brazil,
+peru,
+chili,
+argentine;
+
+.card-detail {
+  &__inner {
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    pointer-events: auto;
+    opacity: 0;
+
+    @include tab {
+      max-width: 100%;
+      width: 100%;
+      overflow: scroll;
+      height: 94vh;
+      margin: 3vh 0 0;
+    }
+
+
+    &.female {
+      background-color : #ffd6d6;
+      background-image :
+      repeating-linear-gradient(to bottom,
+                                rgba(255, 77, 77, 0.25),
+                                rgba(255, 77, 77, 0.25) 9px,
+                                rgba(0, 0, 0, 0) 0,
+                                rgba(0, 0, 0, 0) 18px),
+      repeating-linear-gradient(to right,
+                                rgba(255, 77, 77, 0.1),
+                                rgba(255, 77, 77, 0.1) 9px,
+                                rgba(0, 0, 0, 0) 0,
+                                rgba(0, 0, 0, 0) 18px);
+
+      .card-detail__title {
+        background-color: #FF6767;
+      }
+    }
+
+    &.male {
+      background-color: #d6dfff;
+      background-image :
+      repeating-linear-gradient(to bottom,
+                                rgba(88, 77, 255, 0.25),
+                                rgba(88, 77, 255, 0.25) 9px,
+                                rgba(0, 0, 0, 0) 0,
+                                rgba(0, 0, 0, 0) 18px),
+      repeating-linear-gradient(to right,
+                                rgba(88, 77, 255, 0.1),
+                                rgba(88, 77, 255, 0.1) 9px,
+                                rgba(0, 0, 0, 0) 0,
+                                rgba(0, 0, 0, 0) 18px);
+      .card-detail__header {
+        background-color: #646cc5;
+      }
+
+      .card-detail__title {
+        background-color: #646cc5;
+      }
+
+      .card-detail__number-term {
+        background-color: #646cc5;
+      }
+    }
+  }
+
+  &__header {
+    height: 80px;
+    background-color: #FF6767;
+    border-radius: 5px 6px 0px 0px;
+  }
+
+  &__header-logo-wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 100px 5px 20px;
+    position: relative;
+
+    @include tab {
+      display: block;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__logo-wrap {
+    width: 280px;
+
+    @include tab {
+      width: 248px;
+    }
+  }
+
+  &__logo-main-wrap {
+    width: 150px;
+
+    @include tab {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 60px;
+      right: 0;
+      margin: auto;
+      text-align: center;
+      background-color: rgba(0,0,0,.5);
+
+      img {
+        width: 150px;
+        display: inline-block;
+      }
+    }
+  }
+
+  &__area-wrap {
+    display: flex;
+    margin-top: 12px;
+    padding: 30px;
+
+    @include tab {
+      padding-top: 80px;
+      display: block;
+    }
+  }
+
+  &__photo-area {
+    max-width: 300px;
+    width: 100%;
+
+    @include tab {
+      max-width: 100%;
+    }
+  }
+
+  &__text-area-item {
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+
+    & + .card-detail__text-area-item {
+      margin-top: 50px;
+    }
+
+    @include tab {
+      margin-top: 16px;
+    }
+  }
+
+  &__text-area {
+    padding: 0 0 0 30px;
+
+    @include tab {
+      padding: 0; 
+    }
+  }
+
+  &__photo {
+    width: 100%;
+    position: relative;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    &::before {
+      content: "";
+      display: block;
+      padding-top: 138%;
+    }
+  }
+
+  &__photo-wrap {
+    border-radius: 6px;
+
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+    position: relative;
+    display: block;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background-image: url('../images/frame.png');
+      background-size: 100%;
+    }
+  }
+
+  &__number-box {
+    display: flex;
+    margin: 8px 0 0;
+  }
+
+  &__number-term {
+    width: 130px;
+    background-color: #FF6767;
+    height: 40px;
+    color: #fff;
+    font-size: 1.8rem;
+    line-height: 40px;
+    padding: 0 0 0 16px;
+    font-weight: bold;
+  }
+
+  &__number-description {
+    width: calc(100% - 130px);
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.8rem;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 0 16px 0 0;
+    background-color: #fff;
+    font-weight: bold;
+  }
+
+  &__number {
+    font-family: numberFont;
+    font-weight: bold;
+    font-size: 3.0rem;
+    // color: #FF7C00;
+    // background: -webkit-linear-gradient(top, #464646 0%, #c3bcb3 50%, #4c4743 51%, #d4d4d4 100%);
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+    // display: inline-block;
+
+    display        : inline-block;
+    color          : #ffffff;            /* 文字の色 */
+    letter-spacing : 4px;                /* 文字間 */
+    text-shadow    : 
+         2px  2px 1px #000000,
+        -2px  2px 1px #000000,
+         2px -2px 1px #000000,
+        -2px -2px 1px #000000,
+         2px  0px 1px #000000,
+         0px  2px 1px #000000,
+        -2px  0px 1px #000000,
+         0px -2px 1px #000000;        /* 文字の影 */
+    position: relative;
+
+    &::before {
+      content: inherit;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__company-logo {
+    background-size: contain;
+    width: 180px;
+    height: 180px;
+    margin: 8px auto 0;
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    padding: 0 0 0 20px;
+    position: relative;
+    color: #fff;
+    line-height: 40px;
+
+    &.gray {
+      background-color: #b3b3b3!important;
+    }
+  }
+  &__text-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10px 16px 10px;
+    background-color: #fff;
+    position: relative;
+
+    &::before {
+      content: "";
+      bottom: 15px;
+      background-color: #fff;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      z-index: 1;
+    }
+
+    &::after {
+      content: "";
+      bottom: 0;
+      right: 6px;
+      height: 100%;
+      background-color: #fff;
+      position: absolute;
+      width: 3px;
+      z-index: 1;
+    }
+
+    &.small {
+
+      .card-detail__text-list-title {
+        font-size: 1.5rem;
+      }
+
+      .card-detail__text-list-text {
+        font-size: 1.5rem;
+      }
+
+      .card-detail__text-box {
+        font-size: 1.5rem;
+      }
+    }
+
+    &.col3 {
+      .card-detail__text-list-item {
+        width: 33.3%;
+
+        @include tab {
+          width: 100%;
+        }
+      }
+    }
+
+    & + .card-detail__text-list {
+      margin-top: -16px;
+    }
+
+    & + .card-detail__title {
+      margin-top: 30px
+    }
+
+  }
+  &__text-list-item {
+    display: flex;
+    width: 50%;
+    padding: 0 20px 0 10px;
+    margin: 20px 0 0 0;
+    box-sizing: border-box;
+    justify-content: space-between;
+    position: relative;
+
+    @include tab {
+      width: 100%;
+    }
+
+    &::before {
+      content: "";
+      width: 1px;
+      height: 16px;
+      border-right: 1px dotted #aaa;
+      position: absolute;
+      right: -4px;
+      top: 3px;
+    }
+
+    &::after {
+      content: "";
+      width: 95%;
+      height: 1px;
+      border-bottom: 1px dotted #aaa;
+      position: absolute;
+      bottom: -1px;
+    }
+
+    &.col1 {
+      width: 100%;
+      display: block;
+      border-bottom: none;
+      border-right: none;
+
+      &::before {
+        display: none;
+      }
+    }
+    &.col4 {
+      width: 25%;
+      @include pc {
+        width: 50%;
+      }
+      @include tab {
+        width: 100%;
+      }
+    }
+
+  }
+  &__text-box {
+    font-size: 1.8rem;
+    width: 100%;
+  }
+  &__text-list-title {
+    font-size: 1.8rem;
+    color: #787878;
+    white-space: nowrap;
+  }
+
+  &__text-list-text {
+    font-size: 1.8rem;
+    text-align: right;
+  }
+
+  &__right-arrow {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    font-size: 30px;
+    color: #fff;
+    height: 50px;
+    width: 50px;
+    z-index: 2;
+    pointer-events: auto;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, .4);
+    border: 1px solid rgba(255, 255, 255, .6);
+    cursor: pointer;
+
+    &::before {
+      position: relative;
+      right: -10px;
+    }
+  }
+
+  &__left-arrow {
+    position: absolute;
+    left: 5px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    font-size: 30px;
+    color: #fff;
+    height: 50px;
+    width: 50px;
+    z-index: 2;
+    pointer-events: auto;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, .4);
+    border: 1px solid rgba(255, 255, 255, .6);
+    cursor: pointer;
+
+    &::before {
+      position: relative;
+      right: -6px;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    right: 40px;
+    top: 10px;
+    font-size: 30px;
+    color: #825e49;
+    pointer-events: auto;
+    cursor: pointer;
+    z-index: 2;
+
+    @include tab {
+      right: 13px;
+    }
+  }
+
+  &__flag {
+    display: inline-block;
+    position: relative;
+    padding: 0 0 0 40px;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      left: -10px;
+      width: 35px;
+      height: 24px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      border: 1px solid #333;
+    }
+
+    @each $name in $countryList {
+      &.#{$name} {
+        &::before {
+          background-image: url(../images/flag/#{$name}.png);
+        }
+      }
+    }
+
+    // &.indonesia {
+    //   &::before {
+    //     background-image: url('../images/flag/indonesia.png');
+    //   }
+    // }
+
+    // &.india {
+    //   &::before {
+    //     background-image: url('../images/flag/india.png');
+    //   }
+    // }
+
+    // &.cambosia {
+    //   &::before {
+    //     background-image: url('../images/flag/cambosia.png');
+    //   }
+    // }
+
+    // &.singapore {
+    //   &::before {
+    //     background-image: url('../images/flag/singapore.png');
+    //   }
+    // }
+
+    // &.thai {
+    //   &::before {
+    //     background-image: url('../images/flag/thai.png');
+    //   }
+    // }
+
+    // &.korea {
+    //   &::before {
+    //     background-image: url('../images/flag/korea.png');
+    //   }
+    // }
+
+    // &.china {
+    //   &::before {
+    //     background-image: url('../images/flag/china.png');
+    //   }
+    // }
+
+    // &.japan {
+    //   &::before {
+    //     background-image: url('../images/flag/japan.png');
+    //   }
+    // }
+
+    // &.vetnam {
+    //   &::before {
+    //     background-image: url('../images/flag/vetnam.png');
+    //   }
+    // }
+
+    // &.malaysia {
+    //   &::before {
+    //     background-image: url('../images/flag/malaysia.png');
+    //   }
+    // }
+
+    // &.myanmar {
+    //   &::before {
+    //     background-image: url('../images/flag/myanmar.png');
+    //   }
+    // }
+
+    // &.roc {
+    //   &::before {
+    //     background-image: url('../images/flag/roc.png');
+    //   }
+    // }
+
+    // &.america {
+    //   &::before {
+    //     background-image: url('../images/flag/america.png');
+    //   }
+    // }
+
+  }
+}
+
+
+
+@keyframes show{
+  from{
+      opacity: 0;
+  }
+  to{
+      opacity: 1;
+  }
+}
+.star7 {
+  animation-name: r7;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-delay: .3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
+  
+  .card-detail__photo-wrap {
+    animation: fadeInLeft 1s ease 0.5s 1 normal backwards;
+  }
+
+  .card-detail__number-box {
+    animation: fadeInLeft 1s ease 0.7s 1 normal backwards;
+  }
+
+  .card-detail__company-logo {
+    animation: fadeInLeft 1s ease 0.9s 1 normal backwards;
+  }
+  .card-detail__text-area-item {
+    animation: fadeInRight 1s ease 0.5s 1 normal backwards;
+    & + .card-detail__text-area-item {
+      animation: fadeInRight 1s ease 0.7s 1 normal backwards;
+    }
+  }
+  $count:0;
+  $fadetime:0.5;
+  @while $count<30 {
+    .card-detail__text-list-item:nth-child(#{$count}) {
+      animation: fadeInRight 1s ease $fadetime*1s 1 normal backwards;
+    }
+    $count: $count+1;
+    $fadetime: $fadetime+0.1;
+  }
+}
+// @keyframes r7 {
+//   0%   { 
+//       transform: scale(2000%) rotateY(0deg);
+//       opacity: 0;
+//    }
+//  20% {
+
+//     transform: scale(60%) rotateY(150deg);
+//     opacity: .8;
+//   }
+//  40% {
+
+//     transform: scale(100%) rotateY(0deg);
+//     opacity: 1;
+//   }
+//   80% {
+//     transform: rotateY(360deg);
+//   }
+//   100% { transform: rotateY(360deg);
+//           opacity: 1;
+//    }
+// }
+@keyframes r7 {
+  0%   { 
+      
+      opacity: 0.5;
+   }
+
+  100% { 
+          opacity: 1;
+   }
+}
+
+@keyframes fadeInLeft {
+  0%   { 
+      
+    opacity: 0.5;
+    transform: translateX(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes fadeInRight {
+  0%   { 
+      
+    opacity: 0.5;
+    transform: translateX(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}

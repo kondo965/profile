@@ -1,0 +1,35 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 62.5%;
+  color: $color-text;
+  line-height: 1.6;
+}
+
+li {
+  list-style-type: none
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  &:visited
+  &:active {
+    color: #000;
+  }
+
+}
+
+.fadein {
+  opacity : 0;
+  transform: translateY(20px);
+  transition: all 1s;
+}
+
+@font-face {
+  font-family: 'numberFont';
+  //src: url(../fonts/ChangaOne-Regular.ttf);
+  src: url(../fonts/Montserrat-ExtraBold.ttf);
+}

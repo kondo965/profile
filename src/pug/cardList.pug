@@ -1,0 +1,236 @@
+include /_includes/_head
+
+
+include /_includes/_footer
+
+#loading(style="display:none;")
+  .loading-animation
+
+
+header.header
+  .header__inner
+    .header__logo-wrap
+      img.header__logo(src="./images/bridal_logo.png")
+    .header__logo-main-wrap
+      img.header__logo-main(src="./images/main_logo.png")
+    .header__date-wrap
+      .header__date
+        .header__date-logo.icon.icon-calender
+        | 2021年6月10日
+main.main
+  section.card-list
+    h2.card-list__title
+      | 参加者リスト
+    p.card-list__lead
+      | 気になるプロフィールカードクリックで詳細が見られます
+    - for (var s = 0; s < 3; s++)
+      ul.card-list__list.slider01(id=`slide${s}`)
+     
+        - for (var x = 0; x < 2; x++)
+          li.card-list__list-item.animate__fast
+
+            .card-list__content-box
+              .card-list__photo-area
+
+                .card-list__photo(style="background-image:url('./images/002_after01_l.jpg')")
+                  .card-list__ovarlay-box
+                    ul.card-list__ovarlay-list
+                      li.card-list__ovarlay-list-item
+                        | ABC連盟!{x}aa!{s}
+                      li.card-list__ovarlay-list-item
+                        | K0000
+                      li.card-list__ovarlay-list-item
+                        | 30歳
+                .card-list__button.js-modal-open.animate-hover( role='button' data-target=`modal${s}`)
+                  .icon.icon-content
+                  | 詳細を表示
+                  .icon.icon-arrow_right
+              .card-list__text-area
+                p.card-list__number-box
+                  span.card-list__number-text
+                    | No.
+                  span.card-list__number
+                    | 10
+                - for (var i = 0;i<8;i++)
+                  dl.card-list__text-area-list
+                    dt.card-list__text-area-term
+                      | 身長
+                    dd.card-list__text-area-description
+                      | １６０cm
+        //
+          li.card-list__list-item.male
+            .card-list__button.js-modal-open.animate-hover( role='button' data-target=`modal`)
+              .icon.icon-content
+                | 詳細を表示
+              .icon.icon-arrow_right
+            .card-list__photo-area(style="background-image:url('./images/male.jpg')")
+              p.card-list__number-box
+                | 00021
+              .card-list__ovarlay-box
+                ul.card-list__ovarlay-list
+                  li.card-list__ovarlay-list-item
+                    | ABC連盟!{x}
+                  li.card-list__ovarlay-list-item
+                    | K0000
+                  li.card-list__ovarlay-list-item
+                    | 30歳
+            .card-list__text-area
+              - for (var i = 0;i<8;i++)
+                dl.card-list__text-area-list
+                  dt.card-list__text-area-term
+                    | 身長
+                  dd.card-list__text-area-description
+                  | １６０cm
+- for (var sm = 0; sm < 3; sm++)
+  .modal.js-modal(id=`modal${sm}`)
+    .modal-bg.js-modal-close
+    ul.modal-content.slider02(id=`slide_nav${sm}`)
+      - for (var y = 0; y < 2; y++)
+        li.modal__list-item
+          .modal__list-item-inner
+            .card-detail
+              .card-detail__inner.male
+                .card-detail__header
+                  a.card-detail__close.icon.icon-close.js-modal-close(href="")
+                  .card-detail__header-logo-wrap
+                    .card-detail__logo-wrap
+                      img.card-detail__logo(src="./images/bridal_logo.png")
+                    .card-detail__logo-main-wrap
+                      img.card-detail__logo-main(src="./images/main_logo.png")
+                .card-detail__area-wrap
+                  .card-detail__photo-area
+                    .card-detail__photo-wrap
+                      .card-detail__photo(style="background-image:url('./images/002_after01_l.jpg')")
+                    dl.card-detail__number-box
+                      dt.card-detail__number-term
+                        | Profile No
+                      dd.card-detail__number-description
+                        span.card-detail__number
+                          | 10
+                    .card-detail__company-logo(style="background-image:url('./images/logo/logo_infini.jpg')")
+                  .card-detail__text-area
+                    .card-detail__text-area-item
+                      h2.card-detail__title
+                        | 基本プロフィール
+                      ul.card-detail__text-list
+                        li.card-detail__text-list-item
+                          h3.card-detail__text-list-title
+                            | 登録連盟!{y}aa!{sm}
+                          p.card-detail__text-list-text
+                            | ABC連盟
+                        li.card-detail__text-list-item
+                          h3.card-detail__text-list-title
+                            | 会員番号
+                          p.card-detail__text-list-text
+                            | ABC連盟
+                      ul.card-detail__text-list
+                        - for (var x = 0; x < 9; x++)
+                          li.card-detail__text-list-item
+                            h3.card-detail__text-list-title
+                              | 現住所
+                            p.card-detail__text-list-text
+                              | 東京
+                        li.card-detail__text-list-item
+                          h3.card-detail__text-list-title
+                            | 国籍
+                          p.card-detail__text-list-text
+                            span.card-detail__flag.indonesia
+                              | インドネシア
+                      ul.card-detail__text-list
+                        li.card-detail__text-list-item.col4
+                          h3.card-detail__text-list-title
+                            | 出身地
+                          p.card-detail__text-list-text
+                            | 東京
+                        li.card-detail__text-list-item.col4
+                          h3.card-detail__text-list-title
+                            | 現住所
+                          p.card-detail__text-list-text
+                            | 日本
+                        li.card-detail__text-list-item.col4
+                          h3.card-detail__text-list-title
+                            | 年齢
+                          p.card-detail__text-list-text
+                            | ３０歳
+
+                        li.card-detail__text-list-item.col1
+                          h3.card-detail__text-list-title
+                            | 趣味
+                          .card-detail__text-box
+                            | aaaa<br>aaaaaaa
+                    .card-detail__text-area-item
+                      h2.card-detail__title.gray
+                        | Bridal Alliance Membership
+                      ul.card-detail__text-list.small.col3
+                        - for (var x = 0; x < 6; x++)
+                          li.card-detail__text-list-item
+                            h3.card-detail__text-list-title
+                              | 所属
+                            p.card-detail__text-list-text
+                              | ABC連盟
+                        li.card-detail__text-list-item.col1
+                          h3.card-detail__text-list-title
+                            | プロフィール
+                          .card-detail__text-box
+                            | aaaa<br>aaaaaaa
+
+    //
+      li.modal__list-item
+        .modal__list-item-inner
+          .card-detail
+            .card-detail__inner.male
+              a.card-detail__close.icon.icon-close.js-modal-close(href="")
+              img.card-detail__logo(src="./images/bridal_logo.png")
+              .card-detail__area-wrap
+                .card-detail__photo-area
+                  .card-detail__photo-wrap
+                    .card-detail__photo(style="background-image:url('./images/male.jpg')")
+                    dl.card-detail__number-box
+                      dt.card-detail__number-term
+                        | Profile No!{y}
+                      dd.card-detail__number-description
+                        span.card-detail__number
+                          | 10
+                .card-detail__text-area
+                  .card-detail__text-area-item
+                    h2.card-detail__title
+                      | 基本プロフィール
+                    ul.card-detail__text-list
+                      li.card-detail__text-list-item
+                        h3.card-detail__text-list-title
+                          | 登録連盟
+                        p.card-detail__text-list-text
+                          | ABC連盟
+                      li.card-detail__text-list-item
+                        h3.card-detail__text-list-title
+                          | 会員番号
+                        p.card-detail__text-list-text
+                          | ABC連盟
+                    ul.card-detail__text-list.col3
+                      - for (var x = 0; x < 9; x++)
+                        li.card-detail__text-list-item
+                          h3.card-detail__text-list-title
+                            | 現住所
+                          p.card-detail__text-list-text
+                            | 東京
+                  .card-detail__text-area-item
+                    h2.card-detail__title
+                      | Bridal Alliance Membership
+                    ul.card-detail__text-list
+                      - for (var x = 0; x < 6; x++)
+                        li.card-detail__text-list-item
+                          h3.card-detail__text-list-title
+                            | 所属
+                          p.card-detail__text-list-text
+                            | ABC連盟
+                      li.card-detail__text-list-item.col1
+                        h3.card-detail__text-list-title
+                          | プロフィール
+                        .card-detail__text-box
+                          | aaaa
+
+
+              //p 同一ページに複数のモーダルウィンドウが存在する場合。同一ページに複数のモーダルウィンドウが存在する場合。!{x}
+              //a.js-modal-close(href='#') 閉じる
+
+

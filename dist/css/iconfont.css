@@ -1,0 +1,54 @@
+@font-face {
+    font-family: "iconfont";
+    src: url('../fonts/iconfont.eot?c=1623675267091');
+    src: url('../fonts/iconfont.eot?#iefix') format('eot'),
+        url('../fonts/iconfont.woff2?c=1623675267091') format('woff2'),
+        url('../fonts/iconfont.woff?c=1623675267091') format('woff'),
+        url('../fonts/iconfont.ttf?c=1623675267091') format('truetype'),
+        url('../fonts/iconfont.svg#iconfont&c=1623675267091') format('svg');
+}
+
+.icon:before {
+    font-family: "iconfont";
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    /* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+    text-decoration: none;
+    text-transform: none;
+}
+
+
+.icon-about:before {
+    content: "\F001";
+}
+
+.icon-arrow_left:before {
+    content: "\F002";
+}
+
+.icon-arrow_right:before {
+    content: "\F003";
+}
+
+.icon-calender:before {
+    content: "\F004";
+}
+
+.icon-close:before {
+    content: "\F005";
+}
+
+.icon-content:before {
+    content: "\F006";
+}
+
+.icon-home:before {
+    content: "\F007";
+}
+
+.icon-menu:before {
+    content: "\F008";
+}

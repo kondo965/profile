@@ -1,0 +1,40 @@
+.layout {
+  &__main {
+    margin-left: 240px;
+    padding-top: 56px;
+    width: calc(100% - 240px);
+    background-color: #f8f8f8;
+
+    @include pc {
+      margin-left: 72px;
+      width: calc(100% - 72px);
+    }
+
+    @include tab {
+      margin-left: 0;
+      width: 100%;
+      padding: 56px 0 0;
+      box-sizing: border-box;
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    left: 0;
+    width: 240px;
+    z-index: 10;
+
+    @include pc {
+      width: 72px;
+    }
+
+    @include tab {
+      width: 0px;
+      position: fixed;
+    }
+  }
+
+  &__inner {
+    padding: 12px 24px;
+  }
+}

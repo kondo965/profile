@@ -1,0 +1,87 @@
+.header {
+  background-color: #FF6F6F;
+  height: 60px;
+  position: relative;
+
+  @include tab {
+    text-align: center;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+
+    @include tab {
+      display: block;
+    }
+  }
+
+  &__logo-wrap {
+    max-width: 200px;
+    display: grid;
+    place-items: center;
+
+    @include tab {
+      display: inline-block;
+    }
+  }
+
+  &__logo {
+    width: 100%;
+
+  }
+
+  &__logo-main-wrap {
+    max-width: 140px;
+
+    @include tab {
+      display: inline-block;
+    }
+  }
+
+  &__logo-main {
+    width: 100%;
+  }
+
+  &__date-wrap {
+    @include tab {
+      background-color: rgba(0,0,0,.5);
+      height: 40px;
+      width: calc(100% + 40px);
+      margin: 3px 0 0 -20px;
+    }
+  }
+
+  &__date {
+    color: #fff;
+    font-size: 16px;
+    position: relative;
+    padding: 0 0 0 44px;
+    line-height: 30px;
+    display: grid;
+    place-items: center;
+    line-height: 50px;
+
+    @include tab {
+      width: 140px;
+      margin: auto;
+      line-height: 40px;
+    }
+  }
+
+  &__date-logo {
+    font-size: 30px;
+    position: absolute;
+    left: 0;
+  }
+}
+
+@keyframes show{
+  from{
+      opacity: 0;
+  }
+  to{
+      opacity: 1;
+  }
+}

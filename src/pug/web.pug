@@ -1,0 +1,33 @@
+include /_includes/_head
+include /_includes/_header
+#loading
+  .loading-animation
+include /_includes/_nav
+
+section.layout__main
+  .layout__inner
+    .gallery
+      h2.gallery__main-title 
+        | WEB
+      ul.gallery__list#js-fade-list
+        - for (var i = 0; i < 10; i++)
+          li.gallery__list-item.fade-list-item.fadein
+            a.gallery__list-link(href="")
+              .gallery__image-wrapper.lazyload(data-bg="images/web/reader_store_pc.jpg")
+                .gallery__hover
+                  .gallery__hover-inner
+                    p.gallery__title
+                      | reader store
+    .gallery
+      h2.gallery__main-title 
+        | ART
+      ul.gallery__list#js-fade-list
+        - for (var i = 0; i < 10; i++)
+          li.gallery__list-item.fade-list-item.fadein
+            a.gallery__list-link(href="")
+              .gallery__image-wrapper.lazyload(data-bg="images/web/reader_store_pc.jpg")
+                .gallery__hover
+                  .gallery__hover-inner
+                    p.gallery__title
+                      | reader store
+include /_includes/_footer

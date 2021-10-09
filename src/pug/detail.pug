@@ -1,0 +1,63 @@
+include /_includes/_head
+include /_includes/_header
+include /_includes/_nav
+section.layout__main
+  .layou__inner
+    h2.title__main-title 
+      | 
+    .detail
+      .detail__wrapper
+        .detail__content
+          .detail__image-box
+            .detail__image-wrapper
+              img.detail__image(src="images/web/reader_store_pc.jpg")
+            .detail__image-wrapper
+              img.detail__image(src="images/web/reader_store_pc.jpg")
+            .detail__image-wrapper
+              iframe.detail__movie(width="560" height="315" src="https://www.youtube.com/embed/iGqRnloUkyY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+          .detail__data-box
+            h2.detail__title
+              | 作品タイトル
+            dl.detail__item-list
+              dt.detail__item-term
+                | URL
+              dd.detail__item-description
+                a(href="https://www.youtube.com/watch?v=TUxDw42pzOo" target="_blank")
+                  | https://www.youtube.com/watch?v=TUxDw42pzOo
+            dl.detail__item-list
+              dt.detail__item-term
+                | 説明文
+              dd.detail__item-description
+                | 説明文説明文説明文説明文説明文説明文説明文
+            dl.detail__item-list
+              dt.detail__item-term
+                | SKILL
+              dd.detail__item-description
+                ul.detail__skill-list
+                  li.detail__skill-item
+                    | HTML5
+                  li.detail__skill-item
+                    | SCSS
+                  li.detail__skill-item
+                    | jQuery
+                  li.detail__skill-item
+                    | gulp
+                  li.detail__skill-item
+                    | git
+                  li.detail__skill-item
+                    | jira
+
+            dl.detail__item-list
+              dt.detail__item-term
+                | SHARE
+              dd.detail__item-description
+                ul.detail__sns-list
+                li.detail__sns-item
+                  a(href="#").detail__item-link
+                    .detail__icon.icon-twitter.icon
+                li.detail__sns-item
+                  a(href="#").detail__item-link
+                    .detail__icon.icon-facebook.icon
+
+
+include /_includes/_footer
